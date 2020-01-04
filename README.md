@@ -1,4 +1,7 @@
 # dense-comparison-experiments
+
+Use dense for fully connected layers please!
+
 ```
   num_hid = 200
 
