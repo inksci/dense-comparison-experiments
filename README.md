@@ -28,3 +28,20 @@ Use dense for fully connected layers please!
       h_layer2 = tf.layers.dense( h_layer, num_hid, activation=tf.nn.relu )
       self.Q_value = tf.layers.dense( h_layer2, self.action_dim )
 ```
+
+# Analysis
+
+## The kernel_initializer used in tf.layers.dense
+
+kernel_initializer: Initializer function for the weight matrix.
+        If `None` (default), weights are initialized using the default
+        initializer used by `tf.compat.v1.get_variable`.
+        
+        
+If initializer is `None` (the default), the default initializer passed in
+    the variable scope will be used. If that one is `None` too, a
+    `glorot_uniform_initializer` will be used.
+
+# TO DO
+Initialize the weights using glorot_uniform_initializer, and to see whether the performance can be well as the one using tf.layers.dense.
+
